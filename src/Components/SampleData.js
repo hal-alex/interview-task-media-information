@@ -1,4 +1,4 @@
-export const dataObj = {
+const dataObj = {
   results: {
     raceStatus: "completed",
     gender: "male",
@@ -130,3 +130,5 @@ export const dataObj = {
     ],
   },
 }
+
+export default dataObj
