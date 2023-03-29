@@ -1,6 +1,4 @@
-import { Typography } from "@mui/material"
-import { Box } from "@mui/system"
-import React from "react"
+import { Typography, Box } from "@mui/material"
 import SampleData from "../Components/SampleData"
 import AthleteTable from "../Components/AthleteTable"
 
@@ -10,18 +8,20 @@ const Homepage = () => {
       background: theme.palette.lightGray.main,
       display: "flex",
       flexDirection: "column",
-      minHeight: "100vh",
+      minHeight: "90vh",
       justifyContent: "center",
       alignItems: "center",
-      pt: "60px",
       pb: "60px",
+
     }),
   }
 
   return (
     <Box sx={styles.mainContainer}>
+      <Typography sx={{ p: "30px" }} variant="h4">
+        {SampleData.results.racename}
+      </Typography>
       <Box>
-        <Typography variant="h4">{SampleData.results.racename}</Typography>
         <AthleteTable data={SampleData.results.athletes}></AthleteTable>
       </Box>
     </Box>
