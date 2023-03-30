@@ -21,8 +21,7 @@ const AthleteTable = ({ data }) => {
   let rows = [{}]
 
   const generateRows = () => {
-    rows = []
-    data.map((athelete, index) => {
+    rows = data.map((athelete, index) => {
       const {
         rank,
         firstname,
@@ -32,7 +31,7 @@ const AthleteTable = ({ data }) => {
         bibnumber,
         flag,
       } = athelete
-      rows.push({
+      return {
         id: rank,
         col1: rank,
         col2: firstname + " " + surname,
@@ -40,7 +39,7 @@ const AthleteTable = ({ data }) => {
         col4: flag,
         col5: bibnumber,
         col6: raceprogress.charAt(0).toUpperCase() + raceprogress.slice(1),
-      })
+      }
     })
   }
 

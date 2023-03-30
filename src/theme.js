@@ -1,7 +1,4 @@
 import { createTheme } from "@mui/material/styles"
-import createBreakpoints from "@mui/system/createTheme/createBreakpoints"
-
-const breakPoints = createBreakpoints({})
 
 const theme = createTheme({
   palette: {
